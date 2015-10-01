@@ -1,0 +1,108 @@
+		
+<div id="container" style="padding: 10px 10px 200px; width: 630px">
+    <table frame="box" width="300" cellspacing="2" summary="Methanex Stock Quotes" style="border-collapse: collapse; float:left">
+      <tr>
+        <td height="34" colspan="3" style="border:1px solid #000000;"><b>Current Quote</b></td>
+      </tr>
+      <tr>
+        <td>Last Trade</td>
+        <td>></td>
+        <td align="right" id="lasttrade">&nbsp;</td>
+      </tr>
+      <tr>
+        <td >Change</td>
+        <td>></td>
+        <td align="right" id="change">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Volume</td>
+        <td>></td>
+        <td align="right" id="volume">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Open</td>
+        <td>></td>
+        <td align="right" id="open">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Previous Close</td>
+        <td>></td>
+        <td align="right" id="previousclose">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Day's Range</td>
+        <td>></td>
+        <td align="right" id="dayrange">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Time of Last Trade</td>
+        <td>></td>
+        <td align="right" id="timeoflasttrade">&nbsp;</td>
+      </tr>
+    </table>
+
+
+      <table frame="box" width="300" cellspacing="2" summary="Methanex Fundamental Data" style="border-collapse: collapse; float:right">
+      <tr>
+        <td height="34" colspan="3" style="border:1px solid #000000;"><b>Fundamental Data</b></td>
+      </tr>
+      <tr>
+        <td>Exchange</td>
+        <td>></td>
+        <td align="right" id="exchange">&nbsp;</td>
+      </tr>
+      <tr>
+        <td >52-week range</td>
+        <td>></td>
+        <td align="right" id="52weekrange">&nbsp;</td>
+      <tr>
+        <td>Semi-Annual Div/sh</td>
+        <td>></td>
+        <td align="right" id="divshare">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Ex-Dividend Date</td>
+        <td>></td>
+        <td align="right" id="divdate">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>50 day moving average</td>
+        <td>></td>
+        <td align="right" id="movingaverage">&nbsp;</td>
+      </tr>
+        <tr>
+        <td>Market Cap</td>
+        <td>></td>
+        <td align="right" id="cap">&nbsp;</td>
+      </tr>
+    </table>
+</div>
+
+<div class="ui-widget" id="menu" style="float:left">
+  <label>Select Stock: </label><button id="USA">USA</button><button id="Canada">Canada</button> 
+    <br /><br />
+    <button id="Month">1 Month</button><button id="Quarter">1 Quarter</button><button id="Year">1 Year</button><button id="5Year">5 Years</button> 
+    <br />
+        <label>Compare vs.  <input type="text" id="compareText" name="compare" size="10" value=""></label>
+
+    <label><input id="SP" type="checkbox" name="compare" value="SP">S & P 500 </label><label><input id="SPChemical" type="checkbox" name="compare" value="SPChemical">S & P Chemical index </label><label><input id="Nasdaq" type="checkbox" name="compare" value="SP">Nasdaq </label><button id="Compare"> Compare</button>
+    
+    <p id="errorField" style="color:#FA0515;visibility:hidden">Your stock was not found.</p>
+</div>
+
+
+<div class="clear"></div>
+
+<div class="demo-container" style="float:left">
+      <div id="stockGraph" style="width:650px;height:300px;margin-top:40px;margin-left:10px;float:left"><img class="loader" src="images/ajax-loader.gif" /></div>
+      <p id="legend" style="float:left;margin-top:40px"></p>
+</div>
+<div class="clear"></div>
+<br/>
+<br/>
+<br/>
+<div>
+<a href="#" id="downloadUSA">Click here to download USA data</a>
+<br/>
+<a href="#" id="downloadCanada">Click here to download Canada data</a>
+</div>
