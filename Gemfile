@@ -6,13 +6,10 @@ gem 'activesupport'
 
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem 'sinatra-activerecord'
+
 
 gem 'puma'
-gem 'tux'
 
-gem 'devise'
-gem 'carrierwave'
 
 group :development, :test do
   gem 'pry'
